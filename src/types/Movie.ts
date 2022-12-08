@@ -3,5 +3,6 @@ export interface Movie {
     adult: boolean,
     backdrop_path: string,
     budget: string,
-    original_title: string
+    original_title: string;
+    overview: string;
 }

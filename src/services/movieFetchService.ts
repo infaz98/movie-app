@@ -16,9 +16,9 @@ export const getMoviesForHomeScreen = async (): Promise<Movie[] | undefined>  =>
       }
 }
 
-export const getMovieById = async (movieId: string): Promise<Movie | undefined>  => {
+export const getMovieById = async (movieId: number): Promise<Movie | undefined>  => {
     try {
-        const response = await axios.get(BASE_URL + movieId, { headers : HEADERS})
+        const response = await axios.get(BASE_URL+'movie/'+ movieId, { headers : HEADERS})
         return response.data?.items as Movie;
       } catch (error) {
           console.log(error);
